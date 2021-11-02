@@ -1,18 +1,17 @@
-FROM node:11.1.0-alpine as build
-
-
-FROM node:11.1.0-alpine
+FROM node:11.1.0-alpine as builder
 WORKDIR /app  
 
 COPY package.json . 
 COPY package-lock.json . 
-RUN npm install  
-
-EXPOSE 3000  
+RUN npm install
 
 COPY . .  
 
-CMD ["npm","run","start"]
+RUN npm run build
 
 
-docker run adasdassda prueba hola
+FROM nginx:1.20.1-alpine
+
+COPY --from=builder /app/build /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
