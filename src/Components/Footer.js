@@ -5,6 +5,8 @@ class Footer extends Component {
   render() {
     if (!this.props.data) return null;
 
+    const currentYear = new Date().getFullYear()
+
     const networks = this.props.data.social.map(function (network) {
       return (
         <li key={network.name}>
@@ -23,11 +25,11 @@ class Footer extends Component {
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
+                <li>&copy; Copyright {currentYear} JMC for BlueClouds</li>
                 <li>
                   Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
+                  <a title="JMC" href="mailto:jl.morenocid@gmail.com">
+                    JMC
                   </a>
                 </li>
               </ul>

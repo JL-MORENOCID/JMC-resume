@@ -1,0 +1,127 @@
+{
+  "main": {
+    "name":"Jose Luis Moreno-Cid Cabezas",
+    "description":"Hola, soy un desarrollador, utilizo mis conocimientos para crear lo que imagino. Esta es mi página web de currículum, veamos qué puedo hacer, comencemos",
+    "image":"jmc-640.jpg",
+    "bio":"Soy un entusiasta de los ordenadores, con un espíritu emprendedor, un don para la seguridad en línea y una pasión por la codificación. Nacido en Leganés y viviendo en Fuenlabrada (Madrid), comencé con un ordenador windows95 a los 6 años, tocando todo para ver cómo funcionaba, luego jugando y desarrollando en juegos como Minecraft a los 12 años, donde empieza mi carrera. Me encanta crear y suelo mantener demasiados proyectos en marcha a la vez. Fuera del trabajo me gusta entrenar en el gimnasio y comer sano. Me encanta viajar a nuevos lugares y descubrir otras culturas.",
+    "contactmessage":"No dudes en contactarme, te responderé encantado.",
+    "nav": {
+      "home": "Home",
+      "about": "Acerca de mi",
+      "resume": "CV (Resume)",
+      "works": "Proyectos",
+      "contact": "Contacto"
+    },
+    "email": "jl.morenocid@gmail.com",
+    "phone": "685154911",
+    "github":"https://github.com/JL-MORENOCID",
+    "linkedin":"https://www.linkedin.com/in/jl-morenocid/",
+    "address":{
+      "street":"",
+      "city":"Fuenlabrada (Madrid)",
+      "state":"España",
+      "zip": "28943"
+    },
+    "website": "https://blueclouds.es",
+    "resumedownload":"cv/CV+-+JOSE+LUIS+MORENO-CID+CABEZAS.pdf",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/jl-morenocid/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/JL-MORENOCID",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Todos los días me actualizo, sigo aprendiendo y por ello he tenido contacto con casi todo, pero todavía estoy en proceso de ser un buen desarrollador senior.",
+    "education":[
+      {
+        "school":"IES Gaspar Melchor de Jovellanos",
+        "degree":"Grado Medio en Gestión Administrativa",
+        "graduated":"Junio 2018",
+        "description":"Una experiencia diferente, pero no es mi rama principal."
+      },
+      {
+        "school":"Colegio Los Naranjos",
+        "degree":"Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+        "graduated":"Junio 2020",
+        "description":"Ha sido un reto personal en el que he aprendido experiencias reales con las que he acabado en varias menciones honoríficas."
+      }
+    ],
+    "work":[
+      {
+        "company":"Repuestos Reyes",
+        "title":"Desarrollo de WooCommerce, WordPress y mantenimiento de EPI",
+        "years":"Mayo 2017 - Julio 2017",
+        "description":"¡Mi primer trabajo! Fue una experiencia corta ya que fueron las prácticas del GM, vi un poco de WooCommerce y WordPress, algo básico pero fuerte hoy."
+      },
+      {
+        "company":"Conapa",
+        "title":"Junior FullStack developer",
+        "years":"Julio 2017 - Agosto 2020",
+        "description":"Pequeña empresa con grandes aspiraciones, buenos compañeros para trabajar, aprendí muchas cosas y desperté mi fiebre por el desarrollo, aquí tuve el empujón para comenzar mi carrera profesional."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Python",
+        "level":"60%"
+      },
+      {
+        "name":"VueJs",
+        "level":"35%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"60%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"PHP",
+        "level":"80%"
+      },
+      {
+        "name":"Express",
+        "level":"50%"
+      },
+      {
+        "name":"JAVA",
+        "level":"80%"
+      },      
+      {
+        "name":"MongoDB",
+        "level":"60%"
+      },      
+      {
+        "name":"Docker",
+        "level":"70%"
+      },      
+      {
+        "name":"NodeJs",
+        "level":"60%"
+      },
+      {
+        "name":"Jest",
+        "level":"70%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Mi blog personal (En construcción)",
+        "category":"Mi Blog Personal para compartir mis ideas",
+        "image":"07.jpg",
+        "url":"#"
+      }
+    ]
+  }
+}
