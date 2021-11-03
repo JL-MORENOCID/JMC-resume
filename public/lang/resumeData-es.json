@@ -1,0 +1,127 @@
+{
+  "main": {
+    "name":"ESPAÑOL",
+    "description":"Hi, I am a developer and I use my skills to develop what I am imagining. This is my resume web page, let's see what I can do, let's start",
+    "image":"jmc-640.jpg",
+    "bio":"I am a computer enthusiast, with an entrepreneurial spirit, a knack for online security, and a passion for coding. Born in Leganés and living in Fuenlabrada (Madrid), I started with a windows95 computer at my 6 years old, touching everything to see how it's works, then playing and coding in games like Minecraft at my 12th where my career starts for me. I love to create and tend to keep a few too many projects on the go at a time. Outside of work I like to train at gym and eat well. I love to travel to new places and discover another cultures.",
+    "contactmessage":"Feel free to contact me, I will answer you delighted.",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "resume": "Resume",
+      "works": "Works",
+      "contact": "Contact"
+    },
+    "email": "jl.morenocid@gmail.com",
+    "phone": "685154911",
+    "github":"https://github.com/JL-MORENOCID",
+    "linkedin":"https://www.linkedin.com/in/jl-morenocid/",
+    "address":{
+      "street":"",
+      "city":"Fuenlabrada (Madrid)",
+      "state":"Spain",
+      "zip": "28943"
+    },
+    "website": "https://blueclouds.es",
+    "resumedownload":"cv/CV+-+JOSE+LUIS+MORENO-CID+CABEZAS.pdf",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/jl-morenocid/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/JL-MORENOCID",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Everyday I update myself, I keep learning and I have had touch almost everything, but I'm still in process of being senior dev.",
+    "education":[
+      {
+        "school":"IES Gaspar Melchor de Jovellanos",
+        "degree":"Medium degree in Administrative Management",
+        "graduated":"June 2018",
+        "description":"A different experience but not my main branch."
+      },
+      {
+        "school":"Colegio Los Naranjos",
+        "degree":"Superior Degree of Multiplatform Applications Development",
+        "graduated":"June 2020",
+        "description":"It has been a personal challenge in which I have learned real experiences with which I have ended up with several honorable mentions."
+      }
+    ],
+    "work":[
+      {
+        "company":"Repuestos Reyes",
+        "title":"WooCommerce development and IT maintenance",
+        "years":"May 2017 - July 2017",
+        "description":"My first job! It was a short experience because it was an internship as a scholar, I saw a bit of WooCommerce and WordPress, something basic but strong today."
+      },
+      {
+        "company":"Conapa",
+        "title":"Junior FullStack developer",
+        "years":"July 2017 - August 2020",
+        "description":"Small company with big aspirations, good fellows to cowork with, I learned a lot of things and waked up my coding fever, here I had the push to start my professional career."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Python",
+        "level":"60%"
+      },
+      {
+        "name":"VueJs",
+        "level":"35%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"60%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"PHP",
+        "level":"80%"
+      },
+      {
+        "name":"Express",
+        "level":"50%"
+      },
+      {
+        "name":"JAVA",
+        "level":"80%"
+      },      
+      {
+        "name":"MongoDB",
+        "level":"60%"
+      },      
+      {
+        "name":"Docker",
+        "level":"70%"
+      },      
+      {
+        "name":"NodeJs",
+        "level":"60%"
+      },
+      {
+        "name":"Jest",
+        "level":"70%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Mi blog personal (En construcción)",
+        "category":"My Personal Blog to share my ideas",
+        "image":"07.jpg",
+        "url":"#"
+      }
+    ]
+  }
+}

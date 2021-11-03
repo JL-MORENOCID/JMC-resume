@@ -4,7 +4,14 @@
     "description":"Hi, I am a developer and I use my skills to develop what I am imagining. This is my resume web page, let's see what I can do, let's start",
     "image":"jmc-640.jpg",
     "bio":"I am a computer enthusiast, with an entrepreneurial spirit, a knack for online security, and a passion for coding. Born in Leganés and living in Fuenlabrada (Madrid), I started with a windows95 computer at my 6 years old, touching everything to see how it's works, then playing and coding in games like Minecraft at my 12th where my career starts for me. I love to create and tend to keep a few too many projects on the go at a time. Outside of work I like to train at gym and eat well. I love to travel to new places and discover another cultures.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "contactmessage":"Feel free to contact me, I will answer you delighted.",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "resume": "Resume",
+      "works": "Works",
+      "contact": "Contact"
+    },
     "email": "jl.morenocid@gmail.com",
     "phone": "685154911",
     "github":"https://github.com/JL-MORENOCID",
@@ -31,7 +38,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage":"Everyday I update myself, I keep learning and I have had touch almost everything, but I'm still in process of being senior dev.",
     "education":[
       {
         "school":"IES Gaspar Melchor de Jovellanos",
@@ -100,6 +107,10 @@
       {
         "name":"NodeJs",
         "level":"60%"
+      },
+      {
+        "name":"Jest",
+        "level":"70%"
       }
     ]
   },
@@ -109,7 +120,7 @@
         "title":"Mi blog personal (En construcción)",
         "category":"My Personal Blog to share my ideas",
         "image":"07.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "url":"#"
       }
     ]
   }

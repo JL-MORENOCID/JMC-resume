@@ -1,29 +1,34 @@
-import React, { Component } from "react";
-import ReactGA from "react-ga";
-import $ from "jquery";
-import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import About from "./Components/About";
-import Resume from "./Components/Resume";
-import Contact from "./Components/Contact";
-import Portfolio from "./Components/Portfolio";
+import React, { Component } from "react"
+import ReactGA from "react-ga"
+import $ from "jquery"
+import "./App.css"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import About from "./Components/About"
+import Resume from "./Components/Resume"
+import Contact from "./Components/Contact"
+import Portfolio from "./Components/Portfolio"
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       foo: "bar",
-      resumeData: {}
-    };
+      resumeData: {},
+    }
 
-    ReactGA.initialize("UA-110570651-1");
-    ReactGA.pageview(window.location.pathname);
+    // Set default lang
+    if (localStorage.getItem('user-lang') === null) {
+      localStorage.setItem('user-lang', "en")
+    }
+
+    ReactGA.initialize("UA-110570651-1")
+    ReactGA.pageview(window.location.pathname)
   }
 
-  getResumeData() {
+  getResumeData = () => {
     $.ajax({
-      url: "./resumeData.json",
+      url: "./lang/resumeData-" + localStorage.getItem('user-lang') + ".json",
       dataType: "json",
       cache: false,
       success: function(data) {
@@ -36,8 +41,8 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {
-    this.getResumeData();
+  componentDidMount = () => {
+    this.getResumeData(this.state);
   }
 
   render() {
@@ -50,7 +55,7 @@ class App extends Component {
         <Contact data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />
       </div>
-    );
+    )
   }
 }
 

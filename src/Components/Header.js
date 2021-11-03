@@ -1,15 +1,21 @@
-import React, { Component } from "react";
-import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
+import React, { Component } from "react"
+import ParticlesBg from "particles-bg"
+import Fade from "react-reveal"
 
 class Header extends Component {
   render() {
-    if (!this.props.data) return null;
+    if (!this.props.data) return null
 
-    const linkedin = this.props.data.linkedin;
-    const github = this.props.data.github;
-    const name = this.props.data.name;
-    const description = this.props.data.description;
+    const linkedin = this.props.data.linkedin
+    const github = this.props.data.github
+    const name = this.props.data.name
+    const description = this.props.data.description
+    const nav = this.props.data.nav
+
+    const handleLangClick = e => {
+      e.preventDefault()
+      localStorage.setItem('user-lang', e.target.lang)
+    }
 
     return (
       <header id="home">
@@ -26,31 +32,45 @@ class Header extends Component {
           <ul id="nav" className="nav">
             <li className="current">
               <a className="smoothscroll" href="#home">
-                Home
+                {nav.home}
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#about">
-                About
+                {nav.about}
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                {nav.resume}
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
+                {nav.works}
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#contact">
-                Contact
+                {nav.contact}
+              </a>
+            </li>
+          </ul>
+
+          <ul id="nav" className="nav">
+            <li>
+              <a className="smoothscroll" onClick={handleLangClick} href="#en" lang="en">
+                EN
+              </a>
+            </li>
+
+            <li>
+              <a className="smoothscroll" onClick={handleLangClick} href="#es" lang="es">
+                ES
               </a>
             </li>
           </ul>
@@ -67,10 +87,10 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={linkedin} target="_blank" className="button btn project-btn">
+                <a href={linkedin} target="_blank" rel="noreferrer" className="button btn project-btn">
                   <i className="fa fa-linkedin"></i>LinkedIn
                 </a>
-                <a href={github} target="_blank" className="button btn github-btn">
+                <a href={github} target="_blank" rel="noreferrer" className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
                 </a>
               </ul>
@@ -88,4 +108,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Header
