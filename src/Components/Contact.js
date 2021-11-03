@@ -32,13 +32,13 @@ class Contact extends Component {
         <div className="row">
           <Slide up duration={1000}>
             <div className="eight columns">
-              <form action="mailto:jl.morenocid@gmail.com" method="get" id="contactForm" name="contactForm">
-                <fieldset>
-                  <div>
-                    <button className="submit">EMAIL &rarr;</button>
-                  </div>
-                </fieldset>
-              </form>
+              <div className="download">
+                <p>
+                  <a className="button" href="mailto:jl.morenocid@gmail.com">
+                    <i class="fa fa-envelope"></i> OPEN EMAIL
+                  </a>
+                </p>
+              </div>
 
               <div id="message-warning"> Error boy</div>
               <div id="message-success">
