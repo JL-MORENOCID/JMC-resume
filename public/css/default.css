@@ -805,6 +805,9 @@ properly.
    width:          2px;
 }
 
+.no-resize {
+   resize: none;
+}
 
 
 
