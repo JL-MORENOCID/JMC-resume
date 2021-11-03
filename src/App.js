@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, useRef, useEffect } from "react"
 import ReactGA from "react-ga"
 import $ from "jquery"
 import "./App.css"
@@ -11,15 +11,18 @@ import Portfolio from "./Components/Portfolio"
 
 class App extends Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      foo: "bar",
-      resumeData: {},
-    }
+    super(props)
+
+    this.getResumeData = this.getResumeData.bind(this)
 
     // Set default lang
     if (localStorage.getItem('user-lang') === null) {
       localStorage.setItem('user-lang', "en")
+    }
+    
+    this.state = {
+      resumeData: {},
+      lang: localStorage.getItem('user-lang')
     }
 
     ReactGA.initialize("UA-110570651-1")
@@ -32,23 +35,31 @@ class App extends Component {
       dataType: "json",
       cache: false,
       success: function(data) {
-        this.setState({ resumeData: data });
+        this.setState({ resumeData: data })
       }.bind(this),
       error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
+        console.log(err)
+        alert(err)
       }
-    });
+    })
   }
 
   componentDidMount = () => {
-    this.getResumeData(this.state);
+    this.getResumeData(this.state)
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+
+    // Update lang
+    if (prevState.lang !== this.state.lang) {
+      this.getResumeData(this.state)
+    }
   }
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
+        <Header data={this.state.resumeData.main} handler={this.getResumeData} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />
@@ -59,4 +70,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

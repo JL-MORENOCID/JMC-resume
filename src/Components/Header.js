@@ -12,9 +12,12 @@ class Header extends Component {
     const description = this.props.data.description
     const nav = this.props.data.nav
 
+    let lang = this.props.data.lang
+
     const handleLangClick = e => {
       e.preventDefault()
       localStorage.setItem('user-lang', e.target.lang)
+      this.props.handler()
     }
 
     return (
