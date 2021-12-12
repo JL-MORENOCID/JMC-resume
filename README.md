@@ -151,12 +151,12 @@ _For more examples, please refer to the [Documentation (WIP)](https://blueclouds
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Readable HTML into JSON.
-- [] Add more language compatibilities.
-- [] Add certs with image/document, id and link.
-- [] Create your own resume into our servers.
-- [] API.
-    - [] Tech stack: Express/Fastify, MongoDB -> GraphQL -> Apollo
+- [ ] Readable HTML into JSON.
+- [ ] Add more language compatibilities.
+- [ ] Add certs with image/document, id and link.
+- [ ] Create your own resume into our servers.
+- [ ] API.
+    - [ ] Tech stack: Express/Fastify, MongoDB -> GraphQL -> Apollo
 
 See the [open issues](https://github.com/JL-MORENOCID/JMC-resume/issues) for a full list of proposed features (and known issues).
 
