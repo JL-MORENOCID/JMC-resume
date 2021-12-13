@@ -151,7 +151,7 @@ _For more examples, please refer to the [Documentation (WIP)](https://blueclouds
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Readable HTML into JSON.
+- [ ] ~~Readable HTML into JSON.~~ Not secure, instead markdown (like [github markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax))
 - [ ] Add more language compatibilities.
 - [ ] Add certs with image/document, id and link.
 - [ ] Create your own resume into our servers.
