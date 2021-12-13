@@ -13,9 +13,11 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
+    "react-markdown": "^7.1.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "react-zmage": "^0.8.5-beta.36",
+    "remark-gfm": "^3.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

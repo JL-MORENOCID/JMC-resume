@@ -1,29 +1,37 @@
-import React, { Component } from "react";
-import Slide from "react-reveal";
+import React, { Component } from "react"
+import Slide from "react-reveal"
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from "remark-gfm"
 
 class Resume extends Component {
   getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
+    let letters = "0123456789ABCDEF"
+    let color = "#"
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+      color += letters[Math.floor(Math.random() * 16)]
     }
-    return color;
+    return color
   }
-
+  
   render() {
-    if (!this.props.data) return null;
+    if (!this.props.data) return null
 
-    const skillmessage = this.props.data.skillmessage;
+    const skillmessage = this.props.data.skillmessage
     const education = this.props.data.education.map(function (education) {
       return (
         <div key={education.school}>
           <h3>{education.school}</h3>
           <p className="info">
-            {education.degree} <span>&bull;</span>
+          {education.degree} <span>&bull;</span>
             <em className="date">{education.graduated}</em>
           </p>
-          <p>{education.description}</p>
+          <p>
+            
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {education.description}
+            </ReactMarkdown>
+            
+          </p>
         </div>
       );
     });
@@ -33,18 +41,26 @@ class Resume extends Component {
         <div key={work.company}>
           <h3>{work.company}</h3>
           <p className="info">
-            {work.title}
+            
+              {work.title}
+            
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
-          <p>{work.description}</p>
+          <p>
+            
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {work.description}
+            </ReactMarkdown>
+            
+          </p>
         </div>
       );
     });
 
     const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
+      const backgroundColor = this.getRandomColor()
+      const className = "bar-expand " + skills.name.toLowerCase()
+      const width = skills.level
 
       return (
         <li key={skills.name}>
@@ -66,7 +82,11 @@ class Resume extends Component {
 
             <div className="nine columns main-col">
               <div className="row item">
-                <div className="twelve columns">{education}</div>
+                <div className="twelve columns">
+                  
+                    {education}
+                  
+                </div>
               </div>
             </div>
           </div>
@@ -93,7 +113,7 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+              <p><ReactMarkdown remarkPlugins={[remarkGfm]}>{skillmessage}</ReactMarkdown></p>
 
               <div className="bars">
                 <ul className="skills">{skills}</ul>
@@ -106,4 +126,4 @@ class Resume extends Component {
   }
 }
 
-export default Resume;
+export default Resume

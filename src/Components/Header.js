@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import ParticlesBg from "particles-bg"
 import Fade from "react-reveal"
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from "remark-gfm"
 
 class Header extends Component {
   render() {
@@ -8,11 +10,9 @@ class Header extends Component {
 
     const linkedin = this.props.data.linkedin
     const github = this.props.data.github
-    const name = this.props.data.name
-    const description = this.props.data.description
+    const name = <ReactMarkdown remarkPlugins={[remarkGfm]}>{this.props.data.name}</ReactMarkdown>
+    const description = <ReactMarkdown remarkPlugins={[remarkGfm]}>{this.props.data.description}</ReactMarkdown>
     const nav = this.props.data.nav
-
-    let lang = this.props.data.lang
 
     const handleLangClick = e => {
       e.preventDefault()
@@ -85,7 +85,7 @@ class Header extends Component {
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
+              <h3>{description}</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>

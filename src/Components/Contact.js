@@ -1,17 +1,19 @@
-import React, { Component } from "react";
-import { Fade, Slide } from "react-reveal";
+import React, { Component } from "react"
+import { Fade, Slide } from "react-reveal"
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 class Contact extends Component {
   render() {
-    if (!this.props.data) return null;
+    if (!this.props.data) return null
 
-    const name = this.props.data.name;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
-    const message = this.props.data.contactmessage;
+    const name = this.props.data.name
+    const street = this.props.data.address.street
+    const city = this.props.data.address.city
+    const state = this.props.data.address.state
+    const zip = this.props.data.address.zip
+    const phone = this.props.data.phone
+    const message = this.props.data.contactmessage
 
     return (
       <section id="contact">
@@ -24,7 +26,11 @@ class Contact extends Component {
             </div>
 
             <div className="ten columns">
-              <p className="lead">{message}</p>
+              <p className="lead">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {message}
+                </ReactMarkdown>
+              </p>
             </div>
           </div>
         </Fade>
