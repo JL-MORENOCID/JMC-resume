@@ -290,33 +290,39 @@ ul#nav li.current a { color: #fe6928; }
 .bars .skills {
   	margin-top: 36px;
    list-style: none;
+   column-count: 2;
+   column-gap: 40px;
 }
 .bars li {
    position: relative;
   	margin-bottom: 60px;
-  	background: #333;
+  	background: #ddd;
   	height: 42px;
   	border-radius: 0px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #333;
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
+   mix-blend-mode: difference;
+   color: white;
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
    position: relative;
-	top: -36px;
+	top: 10px;
+   left: 15px;
 }
 .bar-expand {
    position: absolute;
    left: 0;
    top: 0;
-
    margin: 0;
    padding-right: 24px;
   	background: #313131;
    display: inline-block;
-  	height: 42px;
+  	height: 40px;
    line-height: 42px;
    border-radius: 0px;
 }

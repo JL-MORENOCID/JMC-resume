@@ -3,10 +3,10 @@ import Slide from "react-reveal";
 
 class Resume extends Component {
   getRandomColor() {
-    let letters = "0123456789ABCDEF";
+    let letters = "BCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+      color += letters[Math.floor(Math.random() * letters.length)];
     }
     return color;
   }
@@ -85,7 +85,21 @@ class Resume extends Component {
         </Slide>
 
         <Slide left duration={1300}>
-          <div className="row skill">
+          <section id="certs">
+            <div className="row work">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Certs</span>
+                </h1>
+              </div>
+
+              <div className="nine columns main-col">{work}</div>
+            </div>
+          </section>
+        </Slide>
+
+        <Slide left duration={1300}>
+          <div className="row">
             <div className="three columns header-col">
               <h1>
                 <span>Skills</span>
