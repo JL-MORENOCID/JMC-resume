@@ -1,0 +1,31 @@
+{
+  "udemy": [
+    {
+      "title": "Udemy course test",
+      "hours": "12",
+      "credential-id": "1234"
+    }
+  ],
+  "openwebinars": [
+    {
+      "title": "OpenWebinars course test",
+      "hours": "13",
+      "credential-id": "1234"
+    }
+  ],
+  "platzi": [
+    {
+      "title": "Platzi course test",
+      "hours": "14",
+      "credential-id": "12345"
+    }
+  ],
+  "others": [
+    {
+      "origin": "MiCulo Online Courses!",
+      "path": "https://google.es",
+      "title": "Mi culo course test",
+      "hours": "67"
+    }
+  ]
+}

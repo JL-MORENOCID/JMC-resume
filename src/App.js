@@ -14,6 +14,7 @@ class App extends Component {
     super(props)
 
     this.getResumeData = this.getResumeData.bind(this)
+    this.getCertsData = this.getCertsData.bind(this)
 
     // Set default lang
     if (localStorage.getItem('user-lang') === null) {
@@ -22,6 +23,7 @@ class App extends Component {
     
     this.state = {
       resumeData: {},
+      certs: {},
       lang: localStorage.getItem('user-lang')
     }
 
@@ -44,8 +46,24 @@ class App extends Component {
     })
   }
 
+  getCertsData = () => {
+    $.ajax({
+      url: "./lang/certs.json",
+      dataType: "json",
+      cache: false,
+      success: function(data) {
+        this.setState({ certs: data })
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.log(err)
+        alert(err)
+      }
+    })
+  }
+
   componentDidMount = () => {
     this.getResumeData(this.state)
+    this.getCertsData(this.state)
   }
 
   componentDidUpdate = (prevProps, prevState) => {
@@ -53,6 +71,7 @@ class App extends Component {
     // Update lang
     if (prevState.lang !== this.state.lang) {
       this.getResumeData(this.state)
+      this.getCertsData(this.state)
     }
   }
 
@@ -61,7 +80,7 @@ class App extends Component {
       <div className="App">
         <Header data={this.state.resumeData.main} handler={this.getResumeData} />
         <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
+        <Resume data={this.state.resumeData.resume} certs={this.state.certs} />
         <Portfolio data={this.state.resumeData.portfolio} />
         <Contact data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />

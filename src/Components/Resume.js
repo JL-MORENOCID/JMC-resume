@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import Certs from "./Certs"
 
 class Resume extends Component {
   getRandomColor() {
@@ -13,6 +14,9 @@ class Resume extends Component {
 
   render() {
     if (!this.props.data) return null;
+
+    const certs = this.props.certs;
+    console.log(certs)
 
     const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function (education) {
@@ -93,7 +97,9 @@ class Resume extends Component {
                 </h1>
               </div>
 
-              <div className="nine columns main-col">{work}</div>
+              <div className="nine columns main-col">
+                <Certs></Certs>
+              </div>
             </div>
           </section>
         </Slide>
