@@ -61,10 +61,10 @@ export default function CertsAccordions(props) {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const certsList = Object.entries(props.certs)?.map((platform, index) => {
+  const certsList = Object.entries(props.certs)?.map((platform) => {
 
     const {url, format} = getPlatformDataType(platform[0])
-    return platform[1].map( (cert) => {
+    return platform[1].map( (cert, index) => {
 
       const hours = cert?.hours 
         ? <Typography variant="h6">
