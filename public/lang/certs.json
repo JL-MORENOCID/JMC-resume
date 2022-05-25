@@ -1,25 +1,70 @@
 {
   "udemy": [
     {
+      "title": "Angular - The Complete Guide (2022 Edition)",
+      "hours": "34",
+      "description": "",
+      "credentialId": "UC-2e4de7c6-ad7a-4df9-a7ec-48617ec3f5df"
+    },
+    {
+      "title": "Responsive Web Design Essentials - HTML5 CSS3 Bootsrap",
+      "hours": "16.5",
+      "description": "",
+      "credentialId": "UC-18925b0a-6cad-42fb-bcdc-c4ae6369c58f"
+    },
+    {
+      "title": "Mastering Regular Expressions in JavaScript",
+      "hours": "5.5",
+      "description": "",
+      "credentialId": "UC-d8359fdd-58ab-4d4f-a54c-be9ff154e7d1"
+    },
+    {
+      "title": "JavaScript: The Advanced Concepts (2022 Update)",
+      "hours": "25.5",
+      "description": "",
+      "credentialId": "UC-cb49a16f-2401-4e36-8471-7b8002794250"
+    },
+    {
+      "title": "TypeScript for Professionals",
+      "hours": "3",
+      "description": "",
+      "credentialId": "UC-00520a57-270d-4677-b3bd-dec2a67c6261"
+    },
+    {
+      "title": "RxJs 2022",
+      "hours": "4.5",
+      "description": "",
+      "credentialId": "UC-177e3270-49ba-4b9d-93a2-423c4e11c524"
+    },
+    {
+      "title": "Asynchronous JavaScript",
+      "hours": "4.5",
+      "description": "",
+      "credentialId": "UC-0a4da08f-ceb8-420a-ac17-1d867e12b266"
+    },
+    {
+      "title": "UX Writting",
+      "hours": "1.5",
+      "description": "",
+      "credentialId": "UC-a3a63c55-12f7-4f46-b09b-4d4183481c86"
+    },
+    {
       "title": "Gulp 4",
       "hours": "5.5",
-      "description": "Me rascaba el culo bien",
+      "description": "",
       "credentialId": "UC-9c0ba1ad-c5a8-488c-ab60-16ff097659e4"
     }
   ],
-  "openwebinars": [
-    {
-      "title": "Taller de réplicas con MariaDB y contenedores Docker",
-      "hours": "1",
-      "credentialId": "Qv0KXQ6V"
-    }
-  ],
+
+  "openwebinars": [],
+
   "others": [
     {
-      "origin": "MiCulo Online Courses!",
-      "fileName": "https://google.es",
-      "title": "Mi culo course test",
-      "hours": "67"
+      "origin": "UNIR - La Universidad en Internet",
+      "title": "Cibersecurity Masterclass",
+      "hours": "1",
+      "description": "A comprehensive guide to metaexploits and the importance of updating your applications to avoid the most common security risks.",
+      "fileName": ""
     }
   ]
 }
