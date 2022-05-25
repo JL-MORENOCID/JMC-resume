@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.0",
@@ -16,7 +18,9 @@
     "particles-bg": "^2.5.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-draggable": "^4.4.5",
     "react-ga": "^3.3.0",
+    "react-pdf": "^5.7.2",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "react-zmage": "^0.8.5-beta.36",
@@ -47,6 +51,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
     "chokidar": "^3.5.1"
   }
 }

@@ -5,6 +5,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import CertDialog from './CertDialog'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -42,54 +43,67 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions() {
+const getPlatformDataType = (platform) => {
+  switch (platform) {
+    case 'udemy':
+      return {url: 'https://udemy-certificate.s3.amazonaws.com/image', format: 'jpg'}
+    case 'openwebinars':
+      return {url: 'https://openwebinars.net/certificacion', format: 'pdf'}
+    default:
+      return {url: './certs', format: 'pdf'}
+  }
+}
+
+export default function CertsAccordions(props) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
+  const certsList = Object.entries(props.certs)?.map((platform, index) => {
+
+    const {url, format} = getPlatformDataType(platform[0])
+    return platform[1].map( (cert) => {
+
+      const hours = cert?.hours 
+        ? <Typography variant="h6">
+            <b>Hours:</b> {cert.hours}h
+          </Typography>
+        : null
+      const credentialId = cert?.credentialId 
+        ? <Typography variant="h6">
+            <b>Credential-id:</b> {cert.credentialId}
+          </Typography>
+        : null
+      const description = cert?.description 
+        ? <Typography variant="h7">
+            <b>Description:</b>
+            <p>
+              {cert.description}
+            </p>
+          </Typography>
+        : null
+
+      return (
+        <Accordion expanded={expanded === index} onChange={handleChange(index)}>
+          <AccordionSummary aria-controls="{index}-content" id="{index}-header">
+            <Typography variant="h5"><b>{cert.title}</b></Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            {hours}
+            {credentialId}
+            {description}
+            <CertDialog cert={cert} data={{url, format}}></CertDialog>
+          </AccordionDetails>
+        </Accordion>
+      )
+    })
+  });
+
   return (
-    <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Collapsible Group Item #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography variant="h5">Collapsible Group Item #3</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="h6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <>
+      {certsList}
+    </>
   );
 }

@@ -15,9 +15,6 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const certs = this.props.certs;
-    console.log(certs)
-
     const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function (education) {
       return (
@@ -98,7 +95,7 @@ class Resume extends Component {
               </div>
 
               <div className="nine columns main-col">
-                <Certs></Certs>
+                <Certs certs={this.props.certs}></Certs>
               </div>
             </div>
           </section>

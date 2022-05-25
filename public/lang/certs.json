@@ -1,29 +1,23 @@
 {
   "udemy": [
     {
-      "title": "Udemy course test",
-      "hours": "12",
-      "credential-id": "1234"
+      "title": "Gulp 4",
+      "hours": "5.5",
+      "description": "Me rascaba el culo bien",
+      "credentialId": "UC-9c0ba1ad-c5a8-488c-ab60-16ff097659e4"
     }
   ],
   "openwebinars": [
     {
-      "title": "OpenWebinars course test",
-      "hours": "13",
-      "credential-id": "1234"
-    }
-  ],
-  "platzi": [
-    {
-      "title": "Platzi course test",
-      "hours": "14",
-      "credential-id": "12345"
+      "title": "Taller de réplicas con MariaDB y contenedores Docker",
+      "hours": "1",
+      "credentialId": "Qv0KXQ6V"
     }
   ],
   "others": [
     {
       "origin": "MiCulo Online Courses!",
-      "path": "https://google.es",
+      "fileName": "https://google.es",
       "title": "Mi culo course test",
       "hours": "67"
     }
