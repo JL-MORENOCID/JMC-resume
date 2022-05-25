@@ -61,7 +61,7 @@ export default function CertsAccordions(props) {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const certsList = Object.entries(props.certs)?.map((platform) => {
+  const certsList = Object.entries(props.certs)?.map((platform, platformIndex) => {
 
     const {url, format} = getPlatformDataType(platform[0])
     return platform[1].map( (cert, index) => {
@@ -86,8 +86,8 @@ export default function CertsAccordions(props) {
         : null
 
       return (
-        <Accordion expanded={expanded === index} onChange={handleChange(index)}>
-          <AccordionSummary aria-controls="{index}-content" id="{index}-header">
+        <Accordion expanded={expanded === `${platformIndex}${index}`} onChange={handleChange(`${platformIndex}${index}`)}>
+          <AccordionSummary>
             <Typography variant="h5"><b>{cert.title}</b></Typography>
           </AccordionSummary>
           <AccordionDetails>
